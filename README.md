@@ -52,6 +52,7 @@ Validates structural choice integrity via double empirical testing. Executes a b
 
 The raw KDD Cup MOOC benchmark files required to execute this experimental pipeline can be acquired from the following official open-access resource directory:
 - **MOOCData Official Challenge Portal**: [KDD Cup 2015 Student Dropout Prediction Dataset](http://moocdata.cn/challenges/kdd-cup-2015)
+- - **Kaggle**: [KDD Cup 2015](https://www.kaggle.com/datasets/sst2023/kdd-cup-2015)
 
 ---
 
