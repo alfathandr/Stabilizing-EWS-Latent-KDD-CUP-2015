@@ -25,7 +25,7 @@ $$\mathbf{X} \in \mathbb{R}^{\text{Students} \times \text{Weeks} \times \text{Ev
 The operational matrix structure is tightly boxed into a 4-week longitudinal sequence length comprising 7 unique feature attributes.
 
 ### 5. Deep Learning Model Architectures (`CELL 5`)
-Declares baseline deep sequential frameworks (`Vanilla-LSTM`, `Vanilla-Transformer`) alongside the proposed hibrida frameworks (`AE-LSTM`, `AE-Transformer`). Integrates an information bottleneck compression layer restricted to a 32-unit volume layer to filter out zero-value transactional sparsity.
+Declares baseline deep sequential frameworks (`Vanilla-LSTM`, `Vanilla-Transformer`) alongside the proposed hybrid frameworks (`AE-LSTM`, `AE-Transformer`). Integrates an information bottleneck compression layer restricted to a 32-unit volume layer to filter out zero-value transactional sparsity.
 
 ### 6. Multi-Horizon Joint Optimization Pipeline (`CELL 6`)
 Tracks system adaptive prediction powers at sequential checkpoints (Weeks 1, 2, 3, and 4). Embeds local normalizer data processing and Scikit-Learn evaluation functions directly within the loop to maintain standalone execution integrity. Hybrid parameters are optimized using a strict Multi-Objective Joint Loss:
@@ -48,6 +48,13 @@ Validates structural choice integrity via double empirical testing. Executes a b
 
 ---
 
+## 📊 Dataset Availability & Resources
+
+The raw KDD Cup MOOC benchmark files required to execute this experimental pipeline can be acquired from the following official open-access resource directory:
+- **MOOCData Official Challenge Portal**: [KDD Cup 2015 Student Dropout Prediction Dataset](http://moocdata.cn/challenges/kdd-cup-2015)
+
+---
+
 ## 🚀 Execution & Requirements
 
 ### Technical Dependencies
@@ -58,7 +65,8 @@ Validates structural choice integrity via double empirical testing. Executes a b
 - SciPy, Psutil, Pandas, NumPy, Matplotlib, Seaborn
 
 ### Running the Notebook
-1. Put your raw KDD Cup 2015 files (`log_train.csv`, `enrollment_train.csv`, `truth_train.csv`) inside your Google Drive storage path.
-2. Open the file `stabilizing_ews_latent_kdd2015.ipynb` inside Google Colab.
-3. Activate a hardware accelerated GPU environment (`Runtime` -> `Change runtime type` -> `T4 GPU`).
-4. Execute the cells sequentially from `CELL 1` to `CELL 11`. All generated evaluation metric outputs, performance graphics, and model weights checkpoints (`.pth`) will save automatically to your Drive results directory.
+1. Download the raw benchmark files (`log_train.csv`, `enrollment_train.csv`, and `truth_train.csv`) from the challenge dataset link provided above.
+2. Place the raw files inside your designated Google Drive folder directory pathway as mapped in `CELL 2`.
+3. Open the file `stabilizing_ews_latent_kdd2015.ipynb` inside Google Colab.
+4. Activate a hardware accelerated GPU environment (`Runtime` -> `Change runtime type` -> `T4 GPU`).
+5. Execute the cells sequentially from `CELL 1` to `CELL 11`. All generated evaluation metric outputs, performance graphics, and model weights checkpoints (`.pth`) will save automatically to your Drive results directory.
